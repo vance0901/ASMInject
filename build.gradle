@@ -4,7 +4,7 @@ buildscript {
     repositories {
         google()
         jcenter()
-        mavenLocal()
+        mavenLocal()//请自行配置本地仓库,此不是本文重点
         
     }
     dependencies {
