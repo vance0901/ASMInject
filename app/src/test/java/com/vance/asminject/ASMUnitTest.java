@@ -1,4 +1,4 @@
-package com.enjoy.asminject;
+package com.vance.asminject;
 
 
 import org.junit.Test;
@@ -24,7 +24,7 @@ public class ASMUnitTest {
         /**
          * 1、获得待插桩的字节码数据
          */
-        FileInputStream fis = new FileInputStream("F:\\Lance\\ASM\\ASMInject\\app\\src\\test\\java\\com\\enjoy\\asminject\\InjectTest.class");
+        FileInputStream fis = new FileInputStream("F:\\vance\\ASM\\ASMInject\\app\\src\\test\\java\\com\\vance\\asminject\\InjectTest.class");
 
         /**
          * 2、执行插桩
@@ -38,7 +38,7 @@ public class ASMUnitTest {
          * 3、输出结果
          */
         byte[] bytes = classWriter.toByteArray();
-        FileOutputStream fos = new FileOutputStream("F:\\Lance\\ASM\\ASMInject\\app\\src\\test\\java2\\com\\enjoy\\asminject\\InjectTest.class");
+        FileOutputStream fos = new FileOutputStream("F:\\vance\\ASM\\ASMInject\\app\\src\\test\\java2\\com\\vance\\asminject\\InjectTest.class");
         fos.write(bytes);
         fos.close();
     }
@@ -67,7 +67,7 @@ public class ASMUnitTest {
 
         @Override
         public AnnotationVisitor visitAnnotation(String descriptor, boolean visible) {
-            if (descriptor.equals("Lcom/enjoy/asminject/ASMTest;")) {
+            if (descriptor.equals("Lcom/vance/asminject/ASMTest;")) {
                 isInject = true;
             }
             return super.visitAnnotation(descriptor, visible);

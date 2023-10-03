@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
-//apply plugin: 'com.enjoy.asm'
+//apply plugin: 'com.vance.asm'
 
-apply plugin:com.enjoy.plugin.ASMPlugin
+apply plugin:com.vance.plugin.ASMPlugin
 
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.enjoy.asminject"
+        applicationId "com.vance.asminject"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1

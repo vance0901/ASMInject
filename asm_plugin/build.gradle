@@ -21,7 +21,7 @@ publishing {
     publications {
         ASMPlugin(MavenPublication) {
             from components.java
-            groupId 'com.enjoy.plugin'
+            groupId 'com.vance.plugin'
             artifactId 'asm'
             version '1.0'
         }

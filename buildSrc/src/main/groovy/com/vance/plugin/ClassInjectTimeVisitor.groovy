@@ -1,4 +1,4 @@
-package com.enjoy.plugin;
+package com.vance.plugin;
 
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;

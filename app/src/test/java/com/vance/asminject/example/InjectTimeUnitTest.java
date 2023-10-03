@@ -1,4 +1,4 @@
-package com.enjoy.asminject.example;
+package com.vance.asminject.example;
 
 import org.junit.Test;
 import org.objectweb.asm.ClassReader;
@@ -26,7 +26,7 @@ public class InjectTimeUnitTest {
          * 1、准备待分析的class
          */
         FileInputStream fis = new FileInputStream
-                ("src/test/java/com/enjoy/asminject/InjectTest.class");
+                ("src/test/java/com/vance/asminject/InjectTest.class");
 
         /**
          * 2、执行分析与插桩
@@ -43,11 +43,11 @@ public class InjectTimeUnitTest {
          * 3、输出
          */
         byte[] newClassBytes = cw.toByteArray();
-        File file = new File("D:/enjoy/open/ASM/ASMInject/app/src/test/java2/com/enjoy/asminject/");
+        File file = new File("D:/vance/open/ASM/ASMInject/app/src/test/java2/com/vance/asminject/");
         file.mkdirs();
 
         FileOutputStream fos = new FileOutputStream
-                ("D:/enjoy/open/ASM/ASMInject/app/src/test/java2/com/enjoy/asminject/InjectTest" +
+                ("D:/vance/open/ASM/ASMInject/app/src/test/java2/com/vance/asminject/InjectTest" +
                         ".class");
         fos.write(newClassBytes);
 

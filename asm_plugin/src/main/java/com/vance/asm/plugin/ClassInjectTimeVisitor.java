@@ -1,10 +1,8 @@
-package com.enjoy.asm.plugin;
+package com.vance.asm.plugin;
 
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
-
-import java.io.InputStreamReader;
 
 public class ClassInjectTimeVisitor extends ClassVisitor {
 

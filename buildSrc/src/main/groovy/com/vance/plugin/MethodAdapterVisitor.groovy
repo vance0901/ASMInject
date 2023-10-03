@@ -1,4 +1,4 @@
-package com.enjoy.asm.plugin;
+package com.vance.plugin;
 
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.MethodVisitor;
@@ -6,7 +6,7 @@ import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.commons.AdviceAdapter;
 
-public class MethodAdapterVisitor extends AdviceAdapter {
+class MethodAdapterVisitor extends AdviceAdapter {
 
     private String className;
     private String methodName;
@@ -22,9 +22,9 @@ public class MethodAdapterVisitor extends AdviceAdapter {
     }
 
     @Override
-    public AnnotationVisitor visitAnnotation(String desc, boolean visible) {
+    AnnotationVisitor visitAnnotation(String desc, boolean visible) {
         //记录方法是不是被 注解
-        if ("Lcom/enjoy/asminject/InjectTime;".equals(desc)) {
+        if ("Lcom/vance/asminject/InjectTime;".equals(desc)) {
             inject = true;
         }
         return super.visitAnnotation(desc, visible);
@@ -44,6 +44,7 @@ public class MethodAdapterVisitor extends AdviceAdapter {
         }
 
     }
+
 
     @Override
     protected void onMethodExit(int opcode) {
@@ -70,7 +71,7 @@ public class MethodAdapterVisitor extends AdviceAdapter {
 
             // ldc #6 // String execute:
             // 把常量压入栈顶 后面使用
-            mv.visitLdcInsn("==========>"+className + " execute " + methodName + ": ");
+            mv.visitLdcInsn("==========>" + className + " execute " + methodName + ": ");
 
             //invokevirtual #7 // Method java/lang/StringBuilder.append: (Ljava/lang/String;)
             // Ljava/lang/StringBuilder;

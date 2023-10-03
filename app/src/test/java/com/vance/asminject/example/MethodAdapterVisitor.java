@@ -1,6 +1,6 @@
-package com.enjoy.asminject.example;
+package com.vance.asminject.example;
 
-import com.enjoy.asminject.ASMTest;
+import com.vance.asminject.ASMTest;
 
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.MethodVisitor;

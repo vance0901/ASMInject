@@ -1,4 +1,4 @@
-package com.enjoy.asminject;
+package com.vance.asminject;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.enjoy.asminject", appContext.getPackageName());
+        assertEquals("com.vance.asminject", appContext.getPackageName());
     }
 }

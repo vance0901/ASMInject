@@ -1,4 +1,4 @@
-package com.enjoy.asminject;
+package com.vance.asminject;
 
 
 public class InjectTest {

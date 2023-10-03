@@ -1,4 +1,4 @@
-package com.enjoy.plugin
+package com.vance.plugin
 
 import com.android.build.gradle.AppExtension
 import org.gradle.api.Plugin
